@@ -1,0 +1,14 @@
+{
+  "expertise": [],
+  "basic": {
+    "description": "a town alcoholic",
+    "personality": "incredibly rudely and dismissively",
+    "relationships": {
+      "Marnie": "Shane's aunt",
+      "Jas": "Shane's goddaughter and niece",
+      "Emily": "A girl Shane has a crush on"
+    },
+    "living_situation": "Lives with Jas and Marnie on her ranch west of town",
+    "birthday": "Spring 20"
+  }
+}

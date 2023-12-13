@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2Y16tJNYcS/PE7ClsaonYVKAoYUmQ2DQS6XAdHQ37hfrNPGJbN1IRJJ14SvUcNUGWlmKafpEM+2v8dRJCrx9Dg==",
+  "success": true,
+  "projectFilePath": "/Users/leedavis/Projects/StardewGPT/StardewGPT/StardewGPT.csproj",
+  "expectedPackageFiles": [
+    "/Users/leedavis/.nuget/packages/pathoschild.stardew.modbuildconfig/4.1.1/pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512",
+    "/Users/leedavis/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/leedavis/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

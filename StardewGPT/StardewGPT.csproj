@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="manifest.json" />
+    <None Remove="requests\" />
+    <None Remove="ui\" />
+    <None Remove="types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="requests\" />
+    <Folder Include="ui\" />
+    <Folder Include="types\" />
+  </ItemGroup>
+</Project>

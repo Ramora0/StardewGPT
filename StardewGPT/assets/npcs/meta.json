@@ -1,0 +1,76 @@
+{
+  "names": [
+    "Penny",
+    "Pam",
+    "Maru",
+    "Harvey",
+    "Demetrius",
+    "Robin",
+    "Sebastian",
+    "Abigail",
+    "Sam",
+    "Jodi",
+    "Vincent",
+    "Pierre",
+    "Caroline",
+    "George",
+    "Evelyn",
+    "Alex",
+    "Krobus",
+    "Dwarf",
+    "Wizard",
+    "Linus",
+    "Willy",
+    "Elliot",
+    "Leah",
+    "Shane",
+    "Jas",
+    "Marnie",
+    "Lewis",
+    "Emily",
+    "Sandy",
+    "Haley",
+    "Clint",
+    "Gus"
+  ],
+
+  "treatment": {
+    "friendliness": [
+      {
+        "points": 0,
+        "description": "as a stranger you don't know yet"
+      },
+      {
+        "points": 250,
+        "description": "as an acquaintance"
+      },
+      {
+        "points": 750,
+        "description": "as a friend"
+      },
+      {
+        "points": 1500,
+        "description": "as a close friend"
+      },
+      {
+        "points": 2000,
+        "description": "as a best friend"
+      },
+      {
+        "points": 2500,
+        "description": "as a best friend you trust completely"
+      }
+    ],
+    "relationships": {
+      "divorce": "as your ex-spouse whom you resent",
+      "dating": "as a romantic partner",
+      "engaged": "as your fiancee your marying in [CountdownToWedding] days",
+      "marriage": "as your spouse for [DaysMarried] days",
+      "pregnant": {
+        "male": "as your spouse whose child you will have in [DaysUntilBirthing] days",
+        "female": "as your spouse who will have your child in [DaysUntilBirthing] days"
+      },
+      "roomate": "as your roommate"
+    }
+  }
+}

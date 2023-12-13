@@ -1,0 +1,10 @@
+﻿{
+	"Name": "StardewGPT",
+	"Author": "Ramora",
+	"Version": "1.0.0",
+	"Description": "Adds an interface to have conversations with NPCs",
+	"UniqueID": "Ramora.StardewGPT",
+	"EntryDll": "StardewGPT.dll",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": []
+}

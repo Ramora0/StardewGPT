@@ -1,0 +1,8 @@
+/Users/leedavis/Projects/StardewGPT/StardewGPT/bin/Debug/net5.0/StardewGPT.deps.json
+/Users/leedavis/Projects/StardewGPT/StardewGPT/bin/Debug/net5.0/StardewGPT.dll
+/Users/leedavis/Projects/StardewGPT/StardewGPT/obj/Debug/net5.0/StardewGPT.csproj.AssemblyReference.cache
+/Users/leedavis/Projects/StardewGPT/StardewGPT/obj/Debug/net5.0/StardewGPT.GeneratedMSBuildEditorConfig.editorconfig
+/Users/leedavis/Projects/StardewGPT/StardewGPT/obj/Debug/net5.0/StardewGPT.AssemblyInfoInputs.cache
+/Users/leedavis/Projects/StardewGPT/StardewGPT/obj/Debug/net5.0/StardewGPT.AssemblyInfo.cs
+/Users/leedavis/Projects/StardewGPT/StardewGPT/obj/Debug/net5.0/StardewGPT.csproj.CoreCompileInputs.cache
+/Users/leedavis/Projects/StardewGPT/StardewGPT/obj/Debug/net5.0/StardewGPT.dll
