@@ -114,7 +114,7 @@ namespace StardewGPT
       }
       catch
       {
-        Logger.Log("NPC Data not found for " + npcName + ".", LogLevel.Warn);
+        Logger.Error("NPC Data not found for " + npcName );
         return false;
       }
     }

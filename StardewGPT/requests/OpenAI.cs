@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Runtime.ConstrainedExecution;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Netcode;
 using StardewGPT.helpers;
 using StardewGPT.requests;
-using StardewModdingAPI;
 using static StardewGPT.OpenAITypes;
 
 namespace StardewGPT

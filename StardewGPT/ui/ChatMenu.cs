@@ -10,6 +10,8 @@ using StardewGPT.ui;
 using StardewModdingAPI.Events;
 using static StardewGPT.OpenAI;
 using StardewGPT.helpers;
+using StardewValley.Characters;
+using StardewValley.Monsters;
 
 namespace StardewGPT
 {
@@ -130,13 +132,13 @@ namespace StardewGPT
       catch(APIException e)
       {
         ChatManager.RemoveLastMessage();
-        Logger.Log("API Error: " + e.ToString(), LogLevel.Error);
+        Logger.Error("API Error: " + e.ToString());
         Message = e.GetAbbreviatedError();
       }
       catch (Exception e)
       {
         ChatManager.RemoveLastMessage();
-        Logger.Log("Error making request: " + e.ToString(), LogLevel.Error);
+        Logger.Error("Error making request: " + e.ToString());
         Message = "Error making request";
       }
     }
@@ -163,6 +165,11 @@ namespace StardewGPT
           return;
 
         NPC npc = Game1.currentLocation.isCharacterAtTile(cursorPos.GrabTile);
+
+        if (npc is Pet || npc is Horse || npc is Junimo || npc is Monster)
+        {
+          return;
+        }
 
         if (npc != null && npc.CurrentDialogue.Count == 0) {
           Game1.activeClickableMenu = new ChatMenu(npc);
