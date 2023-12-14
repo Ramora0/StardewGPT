@@ -9,7 +9,8 @@
     <None Remove="manifest.json" />
     <None Remove="requests\" />
     <None Remove="ui\" />
-    <None Remove="types\" />
+    <None Remove="helpers\" />
+    <None Remove="helpers\types\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="manifest.json" />
@@ -17,6 +18,7 @@
   <ItemGroup>
     <Folder Include="requests\" />
     <Folder Include="ui\" />
-    <Folder Include="types\" />
+    <Folder Include="helpers\" />
+    <Folder Include="helpers\types\" />
   </ItemGroup>
 </Project>
