@@ -5,6 +5,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Netcode;
+using StardewGPT.helpers;
 using StardewGPT.requests;
 using StardewModdingAPI;
 using static StardewGPT.OpenAITypes;
@@ -37,7 +38,7 @@ namespace StardewGPT
         }
 
         GPTFunctionResultMessage functionResult = FunctionCalling.CallFunction(response1.Message.FunctionCall);
-        ModEntry.Log("FUNCTION RESPONSE: " + JsonSerializer.Serialize(functionResult));
+        Logger.Log("FUNCTION RESPONSE: " + JsonSerializer.Serialize(functionResult));
         ChatManager.AddMessage(functionResult);
 
         setStatus.Invoke("Thinking harder...");
@@ -57,7 +58,7 @@ namespace StardewGPT
     {
       try
       {
-        ModEntry.Log("REQUEST: " + JsonSerializer.Serialize(param));
+        Logger.Log("REQUEST: " + JsonSerializer.Serialize(param));
         using (HttpClient client = new HttpClient())
         {
           string url = "https://z92m33gnq2.execute-api.us-east-1.amazonaws.com/get-response?";
@@ -69,10 +70,10 @@ namespace StardewGPT
 
           var receivedData = await client.SendAsync(request);
           string responseString = await receivedData.Content.ReadAsStringAsync();
-          ModEntry.Log("RESPONSE: " + responseString);
+          Logger.Log("RESPONSE: " + responseString);
           var response = FormatResponse(responseString);
 
-          ModEntry.Log("Cents left: " + response.Charge.UpdatedFreeCentsLeft);
+          Logger.Log("Cents left: " + response.Charge.UpdatedFreeCentsLeft);
 
           return response;
         }
@@ -82,7 +83,7 @@ namespace StardewGPT
     }
 
     public static async void GetSubscriptionStatus() {
-      ModEntry.Log("REQUEST: Subscription status of "+ModEntry.ID);
+      Logger.Log("REQUEST: Subscription status of "+ModEntry.ID);
       try
       {
         using (HttpClient client = new HttpClient())
@@ -92,11 +93,11 @@ namespace StardewGPT
           var request = new HttpRequestMessage(HttpMethod.Get, url);
           var response = await client.SendAsync(request);
           string responseString = await response.Content.ReadAsStringAsync();
-          ModEntry.Log("RESPONSE: " + responseString);
+          Logger.Log("RESPONSE: " + responseString);
           var subscriptionStatus = JsonSerializer.Deserialize<SubscriptionStatusResponse>(responseString);
         }
       } catch(Exception e) {
-        ModEntry.Log("Error: " + e.ToString());
+        Logger.Log("Error: " + e.ToString());
       }
     }
 

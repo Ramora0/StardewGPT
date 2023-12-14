@@ -1,4 +1,5 @@
 ﻿using System;
+using StardewGPT.helpers;
 using StardewGPT.ui;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -12,13 +13,7 @@ namespace StardewGPT
   internal sealed class ModEntry : Mod
   {
     public static IModHelper LHelper;
-    public static IMonitor LMonitor;
     public static string ID;
-
-    public static void Log(string message, LogLevel level = LogLevel.Debug)
-    {
-      LMonitor.Log(message, level);
-    }
     /*********
     ** Public methods
     *********/
@@ -27,7 +22,7 @@ namespace StardewGPT
     public override void Entry(IModHelper helper)
     {
       ModEntry.LHelper = helper;
-      ModEntry.LMonitor = Monitor;
+      Logger.Init(Monitor);
       NPCManager.LoadMetaData();
 
       OpenAI.InstantiateFunctions();
@@ -48,14 +43,14 @@ namespace StardewGPT
       
       OpenAI.GetSubscriptionStatus();
 
-      Log("Unique ID: "+id);
+      Logger.Log("Unique ID: "+id);
     }
 
     private void OnButtonPressed(object sender, ButtonPressedEventArgs e)
     {
       if (e.Button == SButton.J)
       {
-        Log(Game1.player.currentLocation.Name);
+        Logger.Log(Game1.player.currentLocation.Name);
       }
     }
 

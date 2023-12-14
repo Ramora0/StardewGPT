@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using StardewGPT.helpers;
 using StardewModdingAPI;
 using StardewValley;
 using static StardewGPT.OpenAITypes;
@@ -67,7 +68,7 @@ namespace StardewGPT
       try
       {
         string path = $"assets/npcs/{name}.json";
-        ModEntry.Log("Loading NPC Data: " + path);
+        Logger.Log("Loading NPC Data: " + path);
         return ModEntry.LHelper.ModContent.Load<NPCData>(path);
       } catch{
         throw;
@@ -113,7 +114,7 @@ namespace StardewGPT
       }
       catch
       {
-        ModEntry.Log("NPC Data not found for " + npcName + ".", LogLevel.Warn);
+        Logger.Log("NPC Data not found for " + npcName + ".", LogLevel.Warn);
         return false;
       }
     }

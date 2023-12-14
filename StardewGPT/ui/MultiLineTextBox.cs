@@ -129,13 +129,13 @@ namespace StardewGPT.ui
         }
       }
 
-      // ModEntry.Log("Recieved command input: " + (int)command);
+      // Logger.Log("Recieved command input: " + (int)command);
     }
 
     public void RecieveSpecialInput(Keys key)
     {
       // Text += key.ToString();
-      // ModEntry.Log("Recieved Special input: " + key);
+      // Logger.Log("Recieved Special input: " + key);
     }
 
     public void RecieveTextInput(char inputChar)
@@ -145,14 +145,14 @@ namespace StardewGPT.ui
 
       Text += inputChar;
 
-      // ModEntry.Log("Recieved Text input: " + inputChar);
+      // Logger.Log("Recieved Text input: " + inputChar);
     }
 
     public void RecieveTextInput(string text)
     {
       // throw new NotImplementedException();
       Text += text;
-      // ModEntry.Log("Recieved Char input: " + text);
+      // Logger.Log("Recieved Char input: " + text);
     }
   }
 }

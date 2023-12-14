@@ -9,6 +9,7 @@ using StardewModdingAPI;
 using StardewGPT.ui;
 using StardewModdingAPI.Events;
 using static StardewGPT.OpenAI;
+using StardewGPT.helpers;
 
 namespace StardewGPT
 {
@@ -123,19 +124,19 @@ namespace StardewGPT
       // catch (HttpRequestException e) 
       // {
       //   ChatManager.RemoveLastMessage();
-      //   ModEntry.Log("Error making request: " + e.ToString(), LogLevel.Error);
+      //   Logger.Log("Error making request: " + e.ToString(), LogLevel.Error);
       //   Message = "No internet bruv";
       // }
       catch(APIException e)
       {
         ChatManager.RemoveLastMessage();
-        ModEntry.Log("API Error: " + e.ToString(), LogLevel.Error);
+        Logger.Log("API Error: " + e.ToString(), LogLevel.Error);
         Message = e.GetAbbreviatedError();
       }
       catch (Exception e)
       {
         ChatManager.RemoveLastMessage();
-        ModEntry.Log("Error making request: " + e.ToString(), LogLevel.Error);
+        Logger.Log("Error making request: " + e.ToString(), LogLevel.Error);
         Message = "Error making request";
       }
     }
