@@ -58,7 +58,7 @@ namespace StardewGPT
         Logger.Log("REQUEST: " + JsonSerializer.Serialize(param));
         using (HttpClient client = new HttpClient())
         {
-          string url = "https://z92m33gnq2.execute-api.us-east-1.amazonaws.com/get-response?";
+          string url = AWS_URL;
           url += "user-uuid=" + ModEntry.ID;
           var request = new HttpRequestMessage(HttpMethod.Post, url);
 
@@ -85,7 +85,7 @@ namespace StardewGPT
       {
         using (HttpClient client = new HttpClient())
         {
-          string url = "https://z92m33gnq2.execute-api.us-east-1.amazonaws.com/get-subscription-status?";
+          string url = AWS_URL;
           url += "user-uuid=" + ModEntry.ID;
           var request = new HttpRequestMessage(HttpMethod.Get, url);
           var response = await client.SendAsync(request);
